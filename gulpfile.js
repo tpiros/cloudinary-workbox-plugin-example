@@ -36,7 +36,6 @@ const serviceWorkerBuild = async () => {
   });
 };
 
-
 gulp.task('service-worker-importscript', serviceWorkerBuild);
 
 const build = gulp.series('clean', 'copy', 'copy-cloudinary-plugin', 'service-worker-importscript');
