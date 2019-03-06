@@ -15,17 +15,16 @@ const serviceWorkerBuild = async () => {
   return await workboxBuild
   .generateSW({
     swDest: 'build/sw.js',
-    globDirectory: 'build',
     importScripts: ['./cloudinaryPlugin.js'],
     runtimeCaching: [{
       urlPattern: '/api/news',
-      handler: 'staleWhileRevalidate',
+      handler: 'StaleWhileRevalidate',
       options: {
         cacheName: 'api-cache',
       }
     }, {
       urlPattern: new RegExp('^https:\/\/res\.cloudinary\.com\/.*\/image\/upload\/'),
-      handler: 'cacheFirst',
+      handler: 'CacheFirst',
       options: {
         cacheName: 'cloudinary-images',
         plugins: [{
