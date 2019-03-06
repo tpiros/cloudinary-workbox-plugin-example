@@ -2,7 +2,7 @@
 
 In order to install the dependencies please execute `npm i` from the project folder.
 
-Once the dependencies have been installed, please run `npm run build`.
+Once the dependencies have been installed, please run `npm run build` (webpack) or `npm run build:gulp` (gulp). (There are no differences in the output.)
 
 Once the build is complete you can find the final, built project under the `build` folder.
 
